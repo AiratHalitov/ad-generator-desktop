@@ -22,7 +22,7 @@
   <widget class="QWidget" name="centralWidget">
    <layout class="QGridLayout" name="gridLayout">
     <item row="0" column="0">
-     <layout class="QVBoxLayout" name="verticalLayout_3">
+     <layout class="QVBoxLayout" name="mainVLayout">
       <item>
        <widget class="QLabel" name="templateLabel">
         <property name="text">
@@ -31,12 +31,12 @@
        </widget>
       </item>
       <item>
-       <layout class="QHBoxLayout" name="horizontalLayout">
+       <layout class="QHBoxLayout" name="templateHLayout">
         <item>
          <widget class="QTextEdit" name="templateArea"/>
         </item>
         <item>
-         <layout class="QVBoxLayout" name="verticalLayout">
+         <layout class="QVBoxLayout" name="templateButtonsVLayout">
           <item>
            <widget class="QPushButton" name="generateButton">
             <property name="text">
@@ -52,14 +52,17 @@
            </widget>
           </item>
           <item>
-           <widget class="QLabel" name="numberOfResultsLabel">
+           <widget class="QLabel" name="numResultsLabel">
             <property name="text">
              <string>Results:</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QSpinBox" name="numberOfResults">
+           <widget class="QSpinBox" name="numResultsSpinBox">
+            <property name="toolTip">
+             <string>1-100000</string>
+            </property>
             <property name="showGroupSeparator" stdset="0">
              <bool>false</bool>
             </property>
@@ -82,7 +85,7 @@
            </widget>
           </item>
           <item>
-           <spacer name="verticalSpacer">
+           <spacer name="templateSpacer">
             <property name="orientation">
              <enum>Qt::Vertical</enum>
             </property>
@@ -106,12 +109,12 @@
        </widget>
       </item>
       <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <layout class="QHBoxLayout" name="resultHLayout">
         <item>
          <widget class="QTextEdit" name="resultArea"/>
         </item>
         <item>
-         <layout class="QVBoxLayout" name="verticalLayout_2">
+         <layout class="QVBoxLayout" name="resultButtonsVLayout">
           <item>
            <widget class="QPushButton" name="saveButton">
             <property name="text">
@@ -137,14 +140,7 @@
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="closeButton">
-            <property name="text">
-             <string>Close</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <spacer name="verticalSpacer_2">
+           <spacer name="resultSpacer">
             <property name="orientation">
              <enum>Qt::Vertical</enum>
             </property>
@@ -155,6 +151,20 @@
              </size>
             </property>
            </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="aboutButton">
+            <property name="text">
+             <string>About</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="closeButton">
+            <property name="text">
+             <string>Close</string>
+            </property>
+           </widget>
           </item>
          </layout>
         </item>
@@ -240,11 +250,6 @@
     <string>Ctrl+T</string>
    </property>
   </action>
-  <action name="actionSave_to_File">
-   <property name="text">
-    <string>Save to File</string>
-   </property>
-  </action>
   <action name="actionSave">
    <property name="text">
     <string>Save</string>
@@ -263,6 +268,18 @@
   </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>templateArea</tabstop>
+  <tabstop>resultArea</tabstop>
+  <tabstop>generateButton</tabstop>
+  <tabstop>checkBox</tabstop>
+  <tabstop>numResultsSpinBox</tabstop>
+  <tabstop>clearTemplateButton</tabstop>
+  <tabstop>saveButton</tabstop>
+  <tabstop>saveAsHTMLCheckBox</tabstop>
+  <tabstop>clearResultButton</tabstop>
+  <tabstop>closeButton</tabstop>
+ </tabstops>
  <resources/>
  <connections>
   <connection>
@@ -288,8 +305,8 @@
    <slot>close()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>419</x>
-     <y>349</y>
+     <x>627</x>
+     <y>403</y>
     </hint>
     <hint type="destinationlabel">
      <x>299</x>
@@ -304,8 +321,8 @@
    <slot>clear()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>566</x>
-     <y>291</y>
+     <x>627</x>
+     <y>368</y>
     </hint>
     <hint type="destinationlabel">
      <x>254</x>
@@ -320,8 +337,8 @@
    <slot>clear()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>566</x>
-     <y>120</y>
+     <x>627</x>
+     <y>218</y>
     </hint>
     <hint type="destinationlabel">
      <x>254</x>
@@ -358,6 +375,22 @@
     <hint type="destinationlabel">
      <x>254</x>
      <y>361</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionAbout</sender>
+   <signal>triggered()</signal>
+   <receiver>aboutButton</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>566</x>
+     <y>380</y>
     </hint>
    </hints>
   </connection>
