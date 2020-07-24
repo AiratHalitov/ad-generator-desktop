@@ -1,3 +1,5 @@
+.tmp
+
 # C++ objects and libs
 *.slo
 *.lo
