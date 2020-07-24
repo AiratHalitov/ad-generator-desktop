@@ -33,7 +33,7 @@
       <item>
        <layout class="QHBoxLayout" name="templateHLayout">
         <item>
-         <widget class="QTextEdit" name="templateArea"/>
+         <widget class="QPlainTextEdit" name="templateArea"/>
         </item>
         <item>
          <layout class="QVBoxLayout" name="templateButtonsVLayout">
@@ -111,7 +111,7 @@
       <item>
        <layout class="QHBoxLayout" name="resultHLayout">
         <item>
-         <widget class="QTextEdit" name="resultArea"/>
+         <widget class="QPlainTextEdit" name="resultArea"/>
         </item>
         <item>
          <layout class="QVBoxLayout" name="resultButtonsVLayout">
@@ -225,6 +225,9 @@
    <property name="text">
     <string>About</string>
    </property>
+   <property name="shortcut">
+    <string>F2</string>
+   </property>
   </action>
   <action name="actionHelp">
    <property name="text">
@@ -306,75 +309,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>627</x>
-     <y>403</y>
+     <y>445</y>
     </hint>
     <hint type="destinationlabel">
      <x>299</x>
      <y>199</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>clearResultButton</sender>
-   <signal>clicked()</signal>
-   <receiver>resultArea</receiver>
-   <slot>clear()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>627</x>
-     <y>368</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>254</x>
-     <y>361</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>clearTemplateButton</sender>
-   <signal>clicked()</signal>
-   <receiver>templateArea</receiver>
-   <slot>clear()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>627</x>
-     <y>218</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>254</x>
-     <y>157</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>actionClearTemplate</sender>
-   <signal>triggered()</signal>
-   <receiver>templateArea</receiver>
-   <slot>clear()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>-1</x>
-     <y>-1</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>254</x>
-     <y>157</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>actionClearResult</sender>
-   <signal>triggered()</signal>
-   <receiver>resultArea</receiver>
-   <slot>clear()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>-1</x>
-     <y>-1</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>254</x>
-     <y>361</y>
     </hint>
    </hints>
   </connection>
@@ -390,7 +329,71 @@
     </hint>
     <hint type="destinationlabel">
      <x>566</x>
-     <y>380</y>
+     <y>396</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>clearTemplateButton</sender>
+   <signal>clicked()</signal>
+   <receiver>templateArea</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>566</x>
+     <y>204</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>254</x>
+     <y>152</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>clearResultButton</sender>
+   <signal>clicked()</signal>
+   <receiver>resultArea</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>566</x>
+     <y>345</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>254</x>
+     <y>356</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionClearTemplate</sender>
+   <signal>triggered()</signal>
+   <receiver>templateArea</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>254</x>
+     <y>152</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionClearResult</sender>
+   <signal>triggered()</signal>
+   <receiver>resultArea</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>254</x>
+     <y>356</y>
     </hint>
    </hints>
   </connection>

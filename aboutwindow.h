@@ -15,6 +15,9 @@ public:
     explicit AboutWindow(QWidget *parent = 0);
     ~AboutWindow();
 
+private slots:
+    void on_gotoWebsiteButton_clicked();
+
 private:
     Ui::AboutWindow *ui;
 };

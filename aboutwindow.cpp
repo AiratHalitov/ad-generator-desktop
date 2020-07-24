@@ -1,5 +1,7 @@
 #include "aboutwindow.h"
 #include "ui_aboutwindow.h"
+#include <QDesktopServices>
+#include <QUrl>
 
 AboutWindow::AboutWindow(QWidget *parent) :
     QDialog(parent),
@@ -11,4 +13,9 @@ AboutWindow::AboutWindow(QWidget *parent) :
 AboutWindow::~AboutWindow()
 {
     delete ui;
+}
+
+void AboutWindow::on_gotoWebsiteButton_clicked()
+{
+    QDesktopServices::openUrl(QUrl("https://airat.biz/random/"));
 }

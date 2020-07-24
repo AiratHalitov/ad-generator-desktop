@@ -17,7 +17,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>About Program</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0">
@@ -36,11 +36,22 @@
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="closeButton">
-       <property name="text">
-        <string>Ok</string>
-       </property>
-      </widget>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QPushButton" name="gotoWebsiteButton">
+         <property name="text">
+          <string>Go to Website</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="closeButton">
+         <property name="text">
+          <string>Close Window</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </item>
     </layout>
    </item>
@@ -55,8 +66,8 @@
    <slot>close()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>160</x>
-     <y>194</y>
+     <x>159</x>
+     <y>204</y>
     </hint>
     <hint type="destinationlabel">
      <x>159</x>
