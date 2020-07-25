@@ -7,7 +7,11 @@ FILE=ad-generator-desktop
 
 # Clean all old project files
 make clean
-rm $FILE
+
+if [ -f "$FILE" ]; then
+    cp $FILE $FILE.back
+    rm $FILE
+fi
 
 # Compile project (4 threads)
 make -j4
