@@ -1,6 +1,7 @@
 .tmp
 ad-generator-desktop
 *.back
+*.gz
 
 # C++ objects and libs
 *.slo

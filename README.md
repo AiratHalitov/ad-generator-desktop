@@ -1,4 +1,6 @@
 # ad-generator-desktop
+- Author: Airat Halitov
+- Version: 1.0.0
 - License: LGPLv3
 - License URI: https://www.gnu.org/licenses/lgpl-3.0.ru.html
 
