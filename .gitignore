@@ -1,7 +1,9 @@
 .tmp
 ad-generator-desktop
+tst_test
 *.back
 *.gz
+*.zip
 
 # C++ objects and libs
 *.slo
