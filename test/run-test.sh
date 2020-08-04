@@ -3,7 +3,7 @@
 FILE=tst_test
 
 # Generate new Makefile
-#qmake
+qmake
 
 # Clean all old project files
 make clean

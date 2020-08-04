@@ -14,10 +14,14 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    aboutwindow.cpp
+    aboutwindow.cpp \
+    node.cpp \
+    randomizer.cpp
 
 HEADERS  += mainwindow.h \
-    aboutwindow.h
+    aboutwindow.h \
+    node.h \
+    randomizer.h
 
 FORMS    += mainwindow.ui \
     aboutwindow.ui

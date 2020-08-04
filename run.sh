@@ -3,7 +3,7 @@
 FILE=ad-generator-desktop
 
 # Generate new Makefile
-#qmake
+qmake
 
 # Clean all old project files
 make clean
