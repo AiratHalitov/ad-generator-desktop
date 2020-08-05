@@ -1,13 +1,13 @@
 #ifndef RANDOMIZER_H
 #define RANDOMIZER_H
 
-#include <string>
+#include <QString>
 #include "node.h"
 
 class Randomizer
 {
 private:
-    std::string _text;
+    QString _text;
     Node *_tree;
 
 public:

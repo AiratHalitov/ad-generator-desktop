@@ -20,17 +20,17 @@ void Node::concat()
 
 }
 
-void Node::setType(std::__cxx11::string type)
+void Node::setType(QString type)
 {
 
 }
 
-void Node::__get(std::__cxx11::string var)
+void Node::__get(QString var)
 {
 
 }
 
-void Node::__set(std::__cxx11::string var, bool value)
+void Node::__set(QString var, bool value)
 {
 
 }

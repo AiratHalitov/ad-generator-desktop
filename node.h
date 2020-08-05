@@ -1,17 +1,17 @@
 #ifndef NODE_H
 #define NODE_H
 
-#include <string>
+#include <QString>
 
 class Node
 {
 private:
     Node *_parent;
-    std::string _str;
-    std::string _type;
+    QString _str;
+    QString _type;
     Node * _subNodes;
     int * _usedKeys;
-    std::string _separator;
+    QString _separator;
     bool _isSeparator;
 
 public:
@@ -19,9 +19,9 @@ public:
     void getText();
     void numVariant();
     void concat();
-    void setType(std::string type);
-    void __get(std::string var);
-    void __set(std::string var, bool value);
+    void setType(QString type);
+    void __get(QString var);
+    void __set(QString var, bool value);
 };
 
 #endif // NODE_H
