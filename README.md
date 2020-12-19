@@ -30,3 +30,11 @@ make
 ```
 ./run.sh
 ```
+
+## [История изменений](https://github.com/AiratHalitov/ad-generator-desktop/releases)
+
+### [v1.0.0](https://github.com/AiratHalitov/ad-generator-desktop/releases/tag/v1.0.0)
+
+* Первый релиз. Работает форма и некоторые кнопки
+* Алгоритмы пока не внедрены
+* Настроен репозиторий на GitHub
