@@ -1,6 +1,7 @@
 #!/bin/bash
 
 FILE=ad-generator-desktop
+NP=$(nproc)
 
 # Generate new Makefile
 qmake
@@ -13,8 +14,8 @@ if [ -f "$FILE" ]; then
     rm $FILE
 fi
 
-# Compile project (4 threads)
-make -j4
+# Compile project (NP threads)
+make -j $NP
 
 # Run the program
 if [ -f "$FILE" ]; then
